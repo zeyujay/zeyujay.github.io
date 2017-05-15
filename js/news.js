@@ -27,7 +27,7 @@ $(function(){
 			$('#refreshimg').css("transform","")
 			$('#refreshnum').val(0)
 			var index = $(this).index()
-			getnews(newstypes[index].name,"3843c6e97c3a6e0aca9f0b6aef0576ba",0,9,1)
+			/*getnews(newstypes[index].name,"3843c6e97c3a6e0aca9f0b6aef0576ba",0,9,1)*/
 			var btclick = $(this)
 			$('.newstype').find("li").each(function(){
 				if ($(this).is(btclick)) {
@@ -51,11 +51,47 @@ $(function(){
 		}
 	})
 
-	getnews("top","3843c6e97c3a6e0aca9f0b6aef0576ba",0,9)
-	getrefresh(refreshnum)
+	/*getnews("top","3843c6e97c3a6e0aca9f0b6aef0576ba",0,9)*/
+	/*getrefresh(refreshnum)*/
+	$('.leftul').find("li").each(function(){
+	$(this).bind({
+		mouseenter:function(){
+			$(this).find(".lntopline1").css("transition","width 0.5s").end()
+			.find(".lnbottomline").css("transition","width 0.5s 1s").end()
+			.find(".lntopline1").css("width","110px").end()
+			.find(".lnleftline").css("height","400px").end()
+			.find(".lnbottomline").css("width","400px")
+		},
+		mouseleave:function(){
+			$(this).find(".lntopline1").css("transition","width 0.5s 1s").end()
+			.find(".lnbottomline").css("transition","width 0.5s").end()
+			.find(".lnbottomline").css("width","0").end()
+			.find(".lnleftline").css("height","0").end()
+			.find(".lntopline1").css("width","0")	
+		}
+	})
+})
+$('.rightul').find("li").each(function(){
+	$(this).bind({
+		mouseenter:function(){
+			$(this).find(".rntopline1").css("transition","width 0.5s").end()
+			.find(".rnbottomline").css("transition","width 0.5s 1s").end()
+			.find(".rntopline1").css("width","110px").end()
+			.find(".rnrightline").css("height","400px").end()
+			.find(".rnbottomline").css("width","400px")
+		},
+		mouseleave:function(){
+			$(this).find(".rntopline1").css("transition","width 0.5s 1s").end()
+			.find(".rnbottomline").css("transition","width 0.5s").end()
+			.find(".rnbottomline").css("width","0").end()
+			.find(".rnrightline").css("height","0").end()
+			.find(".rntopline1").css("width","0")	
+		}
+	})
+})
 })
 
-function getnews(type,key,begin,end,method){
+/*function getnews(type,key,begin,end,method){
 	if (method==1) {$('.leftul,.rightul').html("")}
 	
 	var news = 	JSON.parse(localStorage[type])
@@ -128,45 +164,10 @@ function getnews(type,key,begin,end,method){
 			'</li>')
 			}
 		}
-	}
-	$('.leftul').find("li").each(function(){
-		$(this).bind({
-			mouseenter:function(){
-				$(this).find(".lntopline1").css("transition","width 0.5s").end()
-				.find(".lnbottomline").css("transition","width 0.5s 1s").end()
-				.find(".lntopline1").css("width","110px").end()
-				.find(".lnleftline").css("height","400px").end()
-				.find(".lnbottomline").css("width","400px")
-			},
-			mouseleave:function(){
-				$(this).find(".lntopline1").css("transition","width 0.5s 1s").end()
-				.find(".lnbottomline").css("transition","width 0.5s").end()
-				.find(".lnbottomline").css("width","0").end()
-				.find(".lnleftline").css("height","0").end()
-				.find(".lntopline1").css("width","0")	
-			}
-		})
-	})
-	$('.rightul').find("li").each(function(){
-		$(this).bind({
-			mouseenter:function(){
-				$(this).find(".rntopline1").css("transition","width 0.5s").end()
-				.find(".rnbottomline").css("transition","width 0.5s 1s").end()
-				.find(".rntopline1").css("width","110px").end()
-				.find(".rnrightline").css("height","400px").end()
-				.find(".rnbottomline").css("width","400px")
-			},
-			mouseleave:function(){
-				$(this).find(".rntopline1").css("transition","width 0.5s 1s").end()
-				.find(".rnbottomline").css("transition","width 0.5s").end()
-				.find(".rnbottomline").css("width","0").end()
-				.find(".rnrightline").css("height","0").end()
-				.find(".rntopline1").css("width","0")	
-			}
-		})
-	})
-}
-function getrefresh(refreshnum){
+	}}*/
+
+
+/*function getrefresh(refreshnum){
 	  $(".center").scroll(function () {  
             var $this = $(this),  
             viewH = $(this).height(),//可见高度  
@@ -194,4 +195,4 @@ function getrefresh(refreshnum){
                 
             }  
             })
-}
+}*/
