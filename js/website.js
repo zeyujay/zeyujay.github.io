@@ -8,7 +8,7 @@ var websitecf = [{"id":"0","url":"http://mail.163.com/","imgurl":"./img/163.svg"
 				{"id":"7","url":"http://stackoverflow.com/","imgurl":"./img/stackoverflow.svg","name":"stack<br>overflow"},
 				{"id":"8","url":"https://www.taobao.com/","imgurl":"./img/taobao.svg","name":"淘宝"},
 				{"id":"9","url":"https://v.qq.com/","imgurl":"./img/tengxun.svg","name":"腾讯视频"},
-				{"id":"10","url":"http://weibo.com/","imgurl":"./img/weibo.svg","name":"微博"},
+				{"id":"10","url":"./weibo/index.html","imgurl":"./img/weibo.svg","name":"微博"},
 				{"id":"11","url":"http://www.youku.com/","imgurl":"./img/youku.svg","name":"优酷"},
 				{"id":"11","url":"http://www.panda.tv/","imgurl":"./img/youku.svg","name":"优酷"}]
 $(function(){
