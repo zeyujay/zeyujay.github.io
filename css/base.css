@@ -1,0 +1,143 @@
+/* 基础设置 */
+	html{
+		width: 100%;
+	  	height: 100%;
+	  	overflow-x: hidden;
+	  	overflow-y:hidden;
+	}
+	body{
+		padding:0;
+		margin: 0;
+		width: 100%;
+	  	height: 100%;
+	}
+	a{
+	  text-decoration: none;
+	}
+	li{
+	  list-style: none;
+	  float: left;
+	}
+	span{
+	  color: #5e5e5e;
+	}
+	.clearfloat:after{
+	    display:block;
+	    clear:both;
+	    content:"";
+	    visibility:hidden;
+	    height:0
+	  } 
+	.clearfloat{
+	    zoom:1
+	}
+	.juzhong{
+		display: -webkit-flex;
+	    display: flex;
+	    -webkit-align-items: center;
+	    -webkit-box-align: center;
+	    align-items: center;
+	  	justify-content: center;
+	  	text-align: center; 
+	}
+/* content 设置 */
+	.content{
+		transition: transform 10s;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background: rgba(60,60,62,1);
+		display: flex;
+		display: -webkit-flex;
+		text-align: center;
+		-webkit-align-items: center;
+	    -webkit-box-align: center;
+	    align-items: center;
+	  	justify-content: center;
+	}
+	.content a span:hover{
+		letter-spacing: 10px;
+	}
+	.content a span{
+		color: #fff;
+		font-size: 22px;
+		font-weight: bolder;
+		letter-spacing: 5px;
+		font-family: "微软雅黑"
+	}
+/* logo设置 */
+	.logo{
+		position: absolute;
+	}
+	.logo img{
+		width: 150px;
+	}
+	.logo span{
+		z-index: 2;
+		position: absolute;
+		margin-top: 80px;
+		width: 0px;
+		transition: width 2s cubic-bezier(1,1,1,1);
+		/* animation: type 2s steps(8, end); */
+		letter-spacing: 2px;
+	    overflow:hidden;
+		color: #fff;
+		font-size: 16px;
+	}
+/* 上下左右中设置 */
+	.top{
+		height: 60px;
+		top:0;
+		left: 60px;
+		right: 60px;
+		 position: absolute;
+	}
+	.top a{
+		transition: transform 0.5s;
+		margin-top: -80px;
+	}
+	.left{
+		left: 0;
+		width: 60px;
+		height: 100%;
+		 position: absolute;
+	}
+	.left a{
+		transition: transform 0.5s;
+		margin-left: -80px;
+		transform:rotate(90deg);
+	}
+	.left a span{
+		font-size: 22px;
+	}
+	.right{
+		width: 60px;
+		height: 100%;
+		right: 0;
+		 position: absolute;
+	}
+	.right a{
+		transition: transform 0.5s;
+		margin-right: -80px;
+		transform:rotate(-90deg);
+	}
+	.bottom{
+		left: 60px;
+		right: 60px;
+		height: 60px;
+		bottom: 0;	
+		 position: absolute;
+	}
+	.bottom a{
+		transition: transform 0.5s;
+		margin-bottom: -80px;
+	}
+	.center{
+		 position: absolute;
+		top: 60px;
+		left: 60px;
+		right: 60px;
+		bottom: 60px;
+		background: rgba(60,60,62,0.49);
+	}	
+	
