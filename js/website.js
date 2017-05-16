@@ -1,4 +1,4 @@
-var websitecf = [{"id":"0","url":"http://mail.163.com/","imgurl":"./img/163.svg","name":"163 Mail"},
+/*var websitecf = [{"id":"0","url":"http://mail.163.com/","imgurl":"./img/163.svg","name":"163 Mail"},
 				{"id":"1","url":"http://www.iqiyi.com/","imgurl":"./img/aiqiyi.svg","name":"爱奇艺"},
 				{"id":"2","url":"https://github.com/","imgurl":"./img/github.svg","name":"github"},
 				{"id":"3","url":"https://www.jd.com","imgurl":"./img/jingdong.svg","name":"京东"},
@@ -10,21 +10,21 @@ var websitecf = [{"id":"0","url":"http://mail.163.com/","imgurl":"./img/163.svg"
 				{"id":"9","url":"https://v.qq.com/","imgurl":"./img/tengxun.svg","name":"腾讯视频"},
 				{"id":"10","url":"./weibo/index.html","imgurl":"./img/weibo.svg","name":"微博"},
 				{"id":"11","url":"http://www.youku.com/","imgurl":"./img/youku.svg","name":"优酷"},
-				{"id":"11","url":"http://www.panda.tv/","imgurl":"./img/youku.svg","name":"优酷"}]
+				{"id":"11","url":"http://www.panda.tv/","imgurl":"./img/youku.svg","name":"优酷"}]*/
 $(function(){
 
-	$.each(websitecf,function(){
-/*				$('.uwebsite1').append('<li><a href='+this.url+' target="_blank"><img src='+this.imgurl+'><br><span>'+this.name+'</span></a></li>')
-*/
+	/*$.each(websitecf,function(){
+				$('.uwebsite1').append('<li><a href='+this.url+' target="_blank"><img src='+this.imgurl+'><br><span>'+this.name+'</span></a></li>')
+
 		$('.uwebsite').append('<li><a href='+this.url+' target="_blank"><img src='+this.imgurl+'><br><span>'+this.name+'</span></a></li>')
 	})
 	$('.uwebsite').find("li").each(function(){
-		/*$(this).hover(function(){
+		$(this).hover(function(){
 			$('.uwebsite').css("transform","rotateX("+($(this).index()+1)*5+"deg)")
 		},function(){
 			$('.uwebsite').css("transform","")
-		})*/
-	})
+		})
+	})*/
 	fourmove(40,true)
 	$("#abottom").click(function(){
 		fourmove(10,true)
@@ -37,6 +37,18 @@ $(function(){
 		fourmove(10,true)
 		setTimeout(function(){
 			window.location.href="index.html";
+		},300)
+	})
+	$('#atop').click(function(){
+		fourmove(10,true)
+		setTimeout(function(){
+			window.location.href="news.html";
+		},300)
+	})
+	$('#aright').click(function(){
+		fourmove(10,true)
+		setTimeout(function(){
+			window.location.href="news.html";
 		},300)
 	})
 	/*$('.uwebsite').click(function(){
@@ -53,48 +65,5 @@ $(function(){
 		},900)
 		
 	})*/
-	$('.bookmarks').click(function(){
-		$('.bookmarks').css("animation","change 1s")
-		setTimeout(function(){
-			$('.bookmarks').css("display","none")
-			$('.bookmarks').css("animation","")
-			$('.uwebsite').css("display","block")
-			$('.uwebsite').css("animation","change 1s reverse")
-			setTimeout(function(){
-			$('.bookmarks').css("animation","")
-			$('.uwebsite').css("animation","")
-		},900)
-		},900)
-		
-	})
-	dumpBookmarks()
 	
 })
-function dumpBookmarks(){
-	chrome.bookmarks.getTree(
-    	function(bookmarkTreeNodes) {
-    		  for (var i = 0; i < bookmarkTreeNodes.length; i++) {
-    			dumpTreeNodes(bookmarkTreeNodes[i].id)
-    		} 		
-    });
-
-}
-
-function dumpTreeNodes(bookmarkTreeNode){
-	chrome.bookmarks.getChildren(bookmarkTreeNode,function(bookmarkTreeNodes){
-		for (var i = 0; i < bookmarkTreeNodes.length; i++) {
-			
-    			dumpNodes(bookmarkTreeNodes[i].id)
-    		} 
-	})
-	
-}
-function dumpNodes(bookmarkTreeNode){
-	chrome.bookmarks.getChildren(bookmarkTreeNode,function(bookmarkTreeNodes){
-		for (var i = 0; i < bookmarkTreeNodes.length; i++) {
-			console.log(bookmarkTreeNodes[i]);
-    			dumpNodes(bookmarkTreeNodes[i].id)
-    		} 
-	})
-	
-}

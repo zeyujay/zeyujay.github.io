@@ -26,6 +26,12 @@ $(function(){
 			window.location.href="news.html";
 		},300)	
 	})
-	getalltype("3843c6e97c3a6e0aca9f0b6aef0576ba")
+	$('#aright').click(function(){
+		fourmove(10,true)
+		setTimeout(function(){
+			window.location.href="contact.html";
+		},300)	
+	})
+	/*getalltype("3843c6e97c3a6e0aca9f0b6aef0576ba")*/
 
 })

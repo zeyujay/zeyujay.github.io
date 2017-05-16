@@ -1,9 +1,9 @@
 var appconfig=[
-		{"id":"0","bg":"url('./img/app1.jpg') no-repeat center","appname":"SINA WEIBO","url":"https://m.weibo.cn"},
-		{"id":"1","bg":"url('./img/app2.jpg') no-repeat center","appname":"BAIDU","url":"https://m.baidu.com"},
-		{"id":"2","bg":"url('./img/app3.jpg') no-repeat center","appname":"YOUTUBE","url":"https://www.youtube.com/?hl=zh-cn"},
-		{"id":"3","bg":"url('./img/app4.jpg') no-repeat center","appname":"ZHI HU","url":"https://www.zhihu.com"},
-		{"id":"4","bg":"url('./img/app5.jpg') no-repeat center","appname":"TWITTER","url":"https://mobile.twitter.com/"}
+		{"id":"0","bg":"url('./img/app1.jpg') no-repeat center","appname":"基本信息","url":"姓名：周泽宇<br>年龄：25<br>身高：175cm<br>体重：70kg"},
+		{"id":"1","bg":"url('./img/app2.jpg') no-repeat center","appname":"毕业院校","url":"毕业院校：江西农业大学<br>专业：软件工程"},
+		{"id":"2","bg":"url('./img/app3.jpg') no-repeat center","appname":"爱好","url":"台球<br>跑步<br>麻将"},
+		{"id":"3","bg":"url('./img/app4.jpg') no-repeat center","appname":"自我评价","url":"自我评价<br>1.谦虚上进，与人为善，对工作热情，有较强的学习精神，不浮躁不浮夸。<br>2.相信天蝎座的我是一个对技术细节要求严谨，一丝不苟，专注的员工。<br>3.对工作的期待是前端移动开发岗位，未来可以成为全栈工程师。<br>4.希望进入公司得到最大的锻炼，也为公司创造更大的效益，共同发展。"},
+		{"id":"4","bg":"url('./img/app5.jpg') no-repeat center","appname":"联系方式","url":"手机号码：18515291278<br>邮箱：zeyujay@163.com<br>个人网址：yi-qiao.top"}
 	]
 $(function(){
 	fourmove(40)
@@ -15,14 +15,12 @@ $(function(){
 	$('.ulhm').find('li').each(function(){
 
 		$(this).bind('click',function(){
-			alert($(this))
 			var id=parseInt($(this).attr("value")) 
-			alert(id)
 			closemenu()
 			$('#appid').attr("value",appconfig[id].id)
 			$('#appname').text(appconfig[id].appname)
 			$('.center').css("background",appconfig[id].bg)
-			$('#appsrc').attr("src",appconfig[id].url)	
+			$('.me').html(appconfig[id].url)	
 		})
 	})
 	bordernone()
@@ -30,7 +28,7 @@ $(function(){
 	$('#appid').attr("value",appconfig[0].id+"")
 	$('#appname').text(appconfig[0].appname)
 	$('.center').css("background",appconfig[0].bg)
-	$('#appsrc').attr("src",appconfig[0].url)
+	$('.me').html(appconfig[0].url)
 
 	$("#abottom").click(function(){
 		fourmove(10,true)
@@ -42,6 +40,18 @@ $(function(){
 		fourmove(10,true)
 		setTimeout(function(){
 			window.location.href="website.html";
+		},500)
+	})
+	$("#atop").click(function(){
+		fourmove(10,true)
+		setTimeout(function(){
+			window.location.href="news.html"
+		},500)
+	})
+	$('#aright').click(function(){	
+		fourmove(10,true)
+		setTimeout(function(){
+			window.location.href="contact.html";
 		},500)
 	})
 	$('#anext').click(function(){
@@ -126,7 +136,7 @@ function changeapp(preornext){
 	$('#appid').attr("value",appconfig[id].id)
 	$('#appname').text(appconfig[id].appname)
 	$('.center').css("background",appconfig[id].bg)
-	$('#appsrc').attr("src",appconfig[id].url)	
+	$('.me').html(appconfig[id].url)	
 }
 function mborder(){
 	setTimeout(function(){

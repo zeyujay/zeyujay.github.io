@@ -46,7 +46,7 @@ body{
 	}
 	.outline_tleft{
 		width: 50%;
-		height: 2px;
+		height: 1px;
 		animation: top 0.5s;
 		transform:rotate(360deg);
 		right: 50%;
@@ -55,7 +55,7 @@ body{
 	}
 	.outline_tright{
 		width: 50%;
-		height: 2px;
+		height: 1px;
 		animation: top 0.5s;
 		left: 50%;
 		top: 0;
@@ -71,7 +71,7 @@ body{
 	}
 	.outline_left{
 		height: 100%;
-		width: 2px;
+		width: 1px;
 		left: 0;
 		top: 0;
 		animation: lr 1s;
@@ -79,7 +79,7 @@ body{
 	}
 	.outline_right{
 		height: 100%;
-		width: 2px;
+		width: 1px;
 		right: 0;
 		top: 0;
 		animation: lr 1s;
@@ -91,7 +91,7 @@ body{
 	}
 	.outline_bleft{
 		width: 30%;
-		height: 2px;
+		height: 1px;
 		left: 0;
 		bottom: -2px;
 		animation: bottom 0.5s;
@@ -100,7 +100,7 @@ body{
 	
 	.outline_bright{
 		width: 30%;
-		height: 2px;
+		height: 1px;
 		right: 0;
 		bottom: -2px;
 		animation: bottom 0.5s;
@@ -117,13 +117,37 @@ body{
 		opacity: 0.8;
 		overflow: hidden;
 	}
+	.pic{
+		border: 1px solid rgb(60,60,62);
+		width: 150px;
+		height: 150px;
+		margin: auto;
+		margin-top: 20px;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	.pic img{
+		width: 150px;
+		height: 175px;
+	}
+	.me{
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		right: 0;
+		color:#fff;
+		font-size: 14px;
+	}
 	.appbig{
 		position: absolute;
 		z-index: 0;
 		left: -15%;
 		right: 0;
-		top: 0;
-		bottom: 0;
+		
+		top: 50%
 		
 	}
 	.appbig a span{
@@ -134,13 +158,14 @@ body{
 	.appname{
 		position: absolute;
 		bottom: -10px;
+		left: 0;
+		right: 0
 	}
 	.appname span{
 		color: #fff;
 		font-size: 15px;
-		font-weight: bolder;
 		letter-spacing: 2px;
-		font-family: "微软雅黑";
+		
 	}
 /* menu设置 */
 	.menu{						
@@ -150,8 +175,9 @@ body{
 		width: 100%;	
 	}
 	.menu div{		
-		width: 33%;
+		width: 33.33%;
 		height: 20px;
+		position: absolute;
 	} 
 	.menu div span{
 		color: #fff;
@@ -165,24 +191,40 @@ body{
 		100%{transform: rotate(1080deg);}
 		
 	}
-	#amenu{
+	.amenu{
+
+
+		margin:0 auto;
+		left:0;
+		right: 0;
+	}
+	.amenu a{
 		display: block;
 		width: 20px;
 		height: 20px;
 		background: url(../img/menu.svg) no-repeat center;
 		margin:0 auto;
-		position: absolute;
 		left:0;
 		right: 0;
 	}
 	.pres{
-		position: absolute;
-		left: 0
+		left: 0;
+		align-content: left;
 	}
 	.next{
+		right: 0;
+		align-content: right;
+	}
+	.pres a {
+		position: absolute;
+		left: 0
+		
+	}
+	.next a {
 		position: absolute;
 		right: 0
 	}
+	
 /* hiddenmenu设置 */
 	@keyframes hiddenmenu{
 		0%{background: rgba(40,40,40,0.1);}
@@ -223,7 +265,7 @@ body{
 		font-size: 25px;
 	}
 	.close{
-		display: none;
+		/* display: none; */
 		width: 20px;
 		height: 20px;
 		position: absolute;

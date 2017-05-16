@@ -135,7 +135,7 @@
 		font-size: 12px;
 		right: 155px;
 		position: absolute;
-		
+		top: -10px
 	}
 	.lefttime{
 		right: 5px;
@@ -193,7 +193,7 @@
 		margin-top: 30px;
 		overflow: hidden;
 		width: 320px;
-		height: 60px;
+		height: 30px;
 		word-wrap: break-word; 
 		word-break: normal;
 		text-align: right;
@@ -237,6 +237,7 @@
 		left: 155px;
 		position: absolute;
 		font-size: 12px;
+		top: -10px
 	}
 	.righttime{
 		left: 5px;
