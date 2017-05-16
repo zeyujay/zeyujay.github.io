@@ -88,7 +88,7 @@
 /* 上下左右中设置 */
 	.top{
 		height: 60px;
-		top:-2px;
+		top:0px;
 		left: 60px;
 		right: 60px;
 		 position: absolute;

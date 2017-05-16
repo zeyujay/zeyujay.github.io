@@ -34,8 +34,8 @@
 	.center div{
 	}
 	#center::-webkit-scrollbar {
-    	width: 7px;
-    	background-color: rgb(70,70,72);
+	    	width: 7px;
+	    	background-color: rgb(70,70,72);
 	}
 	#center::-webkit-scrollbar-thumb {
     	background-color: #464648;
@@ -56,14 +56,11 @@
 		color: rgb(45,45,64);
 		font-weight: 800;
 	}
-	.awebicon{		
-		/* background: #454564; */
+	/* .awebicon{		
+		background: #454564;
 		border: 1px solid #454564;	
-	}
-	.abookmarks{	
-		/* background: #864564; */
-		border: 1px solid #454564;	
-	}
+	} */
+
 	@keyframes change{
 		from{transform: skewX(0deg)/* ;transform: skewX(0deg); */}
 		to{transform: skewX(90deg)/* ;transform: skewX(180deg); */}
